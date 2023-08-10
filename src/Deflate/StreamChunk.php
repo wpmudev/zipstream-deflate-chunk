@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Wpmudev\ZipstreamDeflateChunk\Deflate;
@@ -139,7 +140,7 @@ class StreamChunk extends DeflateStream
             throw new RuntimeException();
         }
 
-		$result = stream_get_contents($this->stream, $this->chunkSize);
+        $result = stream_get_contents($this->stream, $this->chunkSize);
 
         if ($result === false) {
             throw new RuntimeException();
